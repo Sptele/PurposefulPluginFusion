@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PP Modifier</title>
+
+    <script src="static/palette.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/palette.css">
+</head>
+<body>
+	<h1 class="title">Modify the PP</h1>
+
+	<!-- Girth, Length, Ball Diameter, Advanced: Urethra diameter, Circumsized, Foreskin Height-->
+
+	<form name="ppForm" action="" class="slideform">
+		<label for="length" class="label">Length: <span id="ls">105</span>mm</label>
+		<input type="range" min="1" max="210" value="105" class="slider" id="length" oninput="updateSliderDisplay('ls', 'length', this.value)" />
+
+		<label for="girth" class="label">Girth: <span id="gs">50</span>mm</label>
+		<input type="range" min="1" max="100" value="50" class="slider" id="girth" oninput="updateSliderDisplay('gs', 'girth', this.value)" />
+		
+		<label for="bD" class="label">Ball Diameter: <span id="bDs">50</span>mm</label>
+		<input type="range" min="1" max="100" value="50" class="slider" id="bD" oninput="updateSliderDisplay('bDs', 'ballDiameter', this.value)" />
+
+		<label for="uD" class="label">Urethra Diameter: <span id="uDs">15</span>mm</label>
+		<input type="range" min="1" max="30" value="15" class="slider" id="uD" oninput="updateSliderDisplay('uDs', 'urethraDiameter', this.value)" />
+
+		<div>
+			<label for="circum" class="label">Circumsized:</label>
+			<input type="checkbox" id="circum" onchange="toggleButton('circumsized', this)" />
+		</div>
+
+		<label for="fH" class="label">Foreskin Height: <span id="fHs">15</span>mm</label>
+		<input type="range" min="1" max="30" value="15" class="slider" id="fH" oninput="updateSliderDisplay('fHs', 'foreskinLength', this.value)" />
+
+		<!-- Maybe bring this back? -->
+		<!-- <div> 
+			<label for="together" class="label">Balls Must Hang Together:</label>
+			<input type="checkbox" id="together" onchange="toggleButton('ballsTogether', this)" checked />
+		</div> -->
+
+		<button type="button" id="submit" onclick="submitForm()">Build</button>
+	</form> 
+
+	<h2>Output:</h2>
+	<h3 id="message">penis</h3>
+
+	<h2>Return:</h2>
+	<h3 id="returnValue">penis</h3>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"addin",
+	"id":	"156a6986-77aa-4327-b4cb-7d523e9e8117",
+	"author":	"Gautam Khajuria",
+	"description":	{
+		"":	"pp"
+	},
+	"version":	"1",
+	"runOnStartup":	false,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
